@@ -1,101 +1,208 @@
 import Image from "next/image";
-
+import Link from "next/link";
+import { bodoni } from "./fonts/fonts";
+import { Br } from "./components/components";
 export default function Home() {
   return (
-    <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]">
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="https://nextjs.org/icons/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+    <main>
+      <section >
+        <section >
+          <Image
+            src="/images/hero.svg"
+            width={500}
+            height={600}
+            alt="hero image"
+          />
+        </section>
+        <section className="relative z-10 -top-96 ml-6 ">
+          <h1
+            className={`${bodoni.className} uppercase text-3xl italic font-bold opacity-75 leading-10 letter-1`}
+          >
+            luxury <span className="block ml-5">fashion</span>
+            &accessories
+          </h1>
+        </section>
+        <section className="absolute top-3/4 ">
+          <Link
+            className="block border-2 border-black font-medium text-off-white  py-2 px-4 bg-black opacity-50 rounded-3xl text-center"
+            href="/collection"
+          >
+            Explore Collection
+          </Link>
+        </section>
+      </section>
+      {/* New arrival section */}
+      <section className="mt-10 letter-2 p-4">
+        <section className="grid place-items-center mb-8">
+          <h2 className="uppercase ">new arrival</h2>
+          <Br />
+        </section>
+        <section>
+          <section className="flex justify-between p-4">
+            <Link href="/all"> All</Link>
+            <Link href="/Apparel"> Apparel</Link>
+            <Link href="/all"> Dress</Link>
+            <Link href="/all"> Tshirt</Link>
+            <Link href="Bag">Bag</Link>
+          </section>
+          <section className="grid grid-cols-2">
+            <section className="text-center">
+              <Image
+                className="rounded-md"
+                src="/images/hero.svg"
+                width={200}
+                height={300}
+                alt="fashion"
+              />
+              <p>Oblog bag in the world of ceaser its </p>
+              <p className="text-orange-600">$120</p>
+            </section>
+            <section className="text-center">
+              <Image
+                className="rounded-md"
+                src="/images/hero.svg"
+                width={200}
+                height={300}
+                alt="fashion"
+              />
+              <p>Oblog bag in the world of ceaser its </p>
+              <p className="text-orange-600">$120</p>
+            </section>
+            <section className="text-center">
+              <Image
+                className="rounded-md"
+                src="/images/hero.svg"
+                width={200}
+                height={300}
+                alt="fashion"
+              />
+              <p>Oblog bag in the world of ceaser its </p>
+              <p className="text-orange-600">$120</p>
+            </section>
+            <section className="text-center">
+              <Image
+                className="rounded-md"
+                src="/images/hero.svg"
+                width={200}
+                height={300}
+                alt="fashion"
+              />
+              <p>Oblog bag in the world of ceaser its </p>
+              <p className="text-orange-600">$120</p>
+            </section>
+          </section>
+          <section className="grid place-items-center my-8">
+            <Link href="#">Explore More</Link>
+          </section>
+        </section>
+      </section>
+      <section className="p-4">
+        <section className="grid place-items-center my-8">
+          <Br />
+        </section>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+        <section className="grid grid-cols-3 w-6/6">
+          <p>prada</p>
+          <p>prada</p>
+          <p>prada</p>
+          <p>prada</p>
+          <p>prada</p>
+          <p>prada</p>
+        </section>
+        <section className="grid place-items-center my-8">
+          <Br />
+        </section>
+      </section>
+
+      {/* Just for you section */}
+      <section className="p-4">
+        <section className="mt-10 letter-2 p-4">
+          <section className="grid place-items-center mb-8">
+            <h2 className="uppercase ">Just for you</h2>
+            <Br />
+          </section>
+        </section>
+        <section className=" grid  grid-flow-col">
+          <section className="text-center">
             <Image
-              className="dark:invert"
-              src="https://nextjs.org/icons/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
+              className="rounded-md"
+              src="/images/hero.svg"
+              width={200}
+              height={300}
+              alt="fashion"
             />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="https://nextjs.org/icons/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+            <p>Oblog bag in the world of ceaser its </p>
+            <p className="text-orange-600">$120</p>
+          </section>
+          <section className="text-center">
+            <Image
+              className="rounded-md"
+              src="/images/hero.svg"
+              width={200}
+              height={300}
+              alt="fashion"
+            />
+            <p>Oblog bag in the world of ceaser its </p>
+            <p className="text-orange-600">$120</p>
+          </section>
+          <section className="text-center">
+            <Image
+              className="rounded-md"
+              src="/images/hero.svg"
+              width={200}
+              height={300}
+              alt="fashion"
+            />
+            <p>Oblog bag in the world of ceaser its </p>
+            <p className="text-orange-600">$120</p>
+          </section>
+        </section>
+      </section>
+
+      {/* Trending section */}
+      <section className="p-4">
+        <section className="mt-10 letter-2mb-5">
+          <section className="grid place-items-center">
+            <h2 className="uppercase ">@trending</h2>
+          </section>
+        </section>
+        <section>
+          <p className="inline-block rounded-xl p-2 bg-back">#2021</p>
+        </section>
+      </section>
+      {/* Open fashion section */}
+      <section className="bg-back p-4 mb-10">
+        <section className="grid place-items-center text-center">
+          <Image className="inline-block mb-6" src="/images/logo.svg" width={100} height={50} alt="logo" />
+          <p className="mb-6">
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam,
+            omnis ?
+          </p>
+          <Br />
+        </section>
+        <section className=" grid place-items-center grid-cols-2 mt-6">
+          <section className="grid place-items-center">
+            <Image src="/images/search.svg" width={48} height={48} alt="logo" />
+            <p>Lorem ipsum dolor sit amet, lo .</p>
+          </section>
+          <section className="grid place-items-center">
+            <Image src="/images/search.svg" width={48} height={48} alt="logo" />
+            <p>Lorem ipsum dolor sit amet, lo .</p>
+          </section>
+          <section className="grid place-items-center">
+            <Image src="/images/search.svg" width={48} height={48} alt="logo" />
+            <p>Lorem ipsum dolor sit amet, lo .</p>
+          </section>
+          <section className="grid place-items-center">
+            <Image src="/images/search.svg" width={48} height={48} alt="logo" />
+            <p>Lorem ipsum dolor sit amet, lo .</p>
+          </section>
+          <section className="grid place-items-center">
+            <Image src="/images/search.svg" width={48} height={48} alt="logo" />
+            <p>Lorem ipsum dolor sit amet, lo .</p>
+          </section>
+        </section>
+      </section>
+    </main>
   );
 }
