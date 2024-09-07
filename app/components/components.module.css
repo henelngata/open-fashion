@@ -1,0 +1,31 @@
+.scrollContainer {
+    width: 100%;  /* Full width of the parent container */
+    overflow: hidden;  /* Hide overflowing content */
+    background-color: #f0f0f0;  /* Optional: background for visual distinction */
+    border: 1px solid #ccc;  /* Optional: border for styling */
+    white-space: nowrap;  /* Ensure all content stays on a single line */
+}
+
+.scrollContent {
+    display: inline-block;
+    animation: scroll-left 10s linear infinite;  /* Animates the scroll */
+}
+
+.scrollItem {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #008CBA;  /* Item background */
+    color: white;
+    margin: 0 10px;
+    font-size: 18px;
+    border-radius: 5px;  /* Optional: rounded corners */
+}
+
+@keyframes scroll-left {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(-100%);
+    }
+}

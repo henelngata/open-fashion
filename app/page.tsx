@@ -1,12 +1,12 @@
 import Image from "next/image";
 import Link from "next/link";
 import { bodoni } from "./fonts/fonts";
-import { Br } from "./components/components";
+import { Br, ScrollingItems } from "./components/components";
 export default function Home() {
   return (
     <main>
-      <section >
-        <section >
+      <section>
+        <section>
           <Image
             src="/images/hero.svg"
             width={500}
@@ -14,7 +14,7 @@ export default function Home() {
             alt="hero image"
           />
         </section>
-        <section className="relative z-10 -top-96 ml-6 ">
+        <section className="relative z-10 top60">
           <h1
             className={`${bodoni.className} uppercase text-3xl italic font-bold opacity-75 leading-10 letter-1`}
           >
@@ -22,9 +22,9 @@ export default function Home() {
             &accessories
           </h1>
         </section>
-        <section className="absolute top-3/4 ">
+        <section className="absolute top-85 w-2/3 left-14">
           <Link
-            className="block border-2 border-black font-medium text-off-white  py-2 px-4 bg-black opacity-50 rounded-3xl text-center"
+            className="block border-2 border-black font-medium text-off-white  py-2 px-4 bg-black opacity-50 rounded-3xl text-center "
             href="/collection"
           >
             Explore Collection
@@ -32,7 +32,7 @@ export default function Home() {
         </section>
       </section>
       {/* New arrival section */}
-      <section className="mt-10 letter-2 p-4">
+      <section className="red mt-10 letter-2 p-4 -top-20 z-10">
         <section className="grid place-items-center mb-8">
           <h2 className="uppercase ">new arrival</h2>
           <Br />
@@ -45,13 +45,22 @@ export default function Home() {
             <Link href="/all"> Tshirt</Link>
             <Link href="Bag">Bag</Link>
           </section>
-          <section className="grid grid-cols-2">
+          <section className="grid grid-cols-2 gap-2.5">
             <section className="text-center">
               <Image
-                className="rounded-md"
-                src="/images/hero.svg"
-                width={200}
-                height={300}
+                src="/images/1.svg"
+                width={165}
+                height={200}
+                alt="fashion"
+              />
+              <p className="leading-0"> 21WN reversible angora cardigan</p>
+              <p className="text-orange-600">$120</p>
+            </section>
+            <section className="text-center">
+              <Image
+                src="/images/2.svg"
+                width={165}
+                height={200}
                 alt="fashion"
               />
               <p>Oblog bag in the world of ceaser its </p>
@@ -59,10 +68,9 @@ export default function Home() {
             </section>
             <section className="text-center">
               <Image
-                className="rounded-md"
-                src="/images/hero.svg"
-                width={200}
-                height={300}
+                src="/images/3.svg"
+                width={165}
+                height={200}
                 alt="fashion"
               />
               <p>Oblog bag in the world of ceaser its </p>
@@ -70,29 +78,26 @@ export default function Home() {
             </section>
             <section className="text-center">
               <Image
-                className="rounded-md"
-                src="/images/hero.svg"
-                width={200}
-                height={300}
-                alt="fashion"
-              />
-              <p>Oblog bag in the world of ceaser its </p>
-              <p className="text-orange-600">$120</p>
-            </section>
-            <section className="text-center">
-              <Image
-                className="rounded-md"
-                src="/images/hero.svg"
-                width={200}
-                height={300}
+                src="/images/2.svg"
+                width={165}
+                height={200}
                 alt="fashion"
               />
               <p>Oblog bag in the world of ceaser its </p>
               <p className="text-orange-600">$120</p>
             </section>
           </section>
-          <section className="grid place-items-center my-8">
-            <Link href="#">Explore More</Link>
+          <section className="grid place-items-center my-8 ">
+            <Link href="#" className="flex ">
+              Explore More{" "}
+              <Image
+                className="ml-2"
+                src="/images/forward-arrow.svg"
+                width={18}
+                height={18}
+                alt="forward arrow"
+              />{" "}
+            </Link>
           </section>
         </section>
       </section>
@@ -101,13 +106,43 @@ export default function Home() {
           <Br />
         </section>
 
-        <section className="grid grid-cols-3 w-6/6">
-          <p>prada</p>
-          <p>prada</p>
-          <p>prada</p>
-          <p>prada</p>
-          <p>prada</p>
-          <p>prada</p>
+        <section className="grid grid-cols-3 gap-6 place-items-center">
+          <Image
+            src="/images/prada.svg"
+            width={69.32}
+            height={10.69}
+            alt="prada logo"
+          />
+          <Image
+            src="/images/burberry.svg"
+            width={98.32}
+            height={7.31}
+            alt="prada logo"
+          />
+          <Image
+            src="/images/boss.svg"
+            width={52.6}
+            height={19.73}
+            alt="prada logo"
+          />
+          <Image
+            src="/images/catier.svg"
+            width={72.17}
+            height={20.01}
+            alt="prada logo"
+          />
+          <Image
+            src="/images/gucci.svg"
+            width={94.26}
+            height={14.71}
+            alt="prada logo"
+          />
+          <Image
+            src="/images/tiffany-co.svg"
+            width={98.36}
+            height={12.64}
+            alt="prada logo"
+          />
         </section>
         <section className="grid place-items-center my-8">
           <Br />
@@ -122,16 +157,17 @@ export default function Home() {
             <Br />
           </section>
         </section>
-        <section className=" grid  grid-flow-col">
-          <section className="text-center">
+        <section className="grid-flow-col">
+          <ScrollingItems/>
+          <section className="text-center red">
             <Image
               className="rounded-md"
-              src="/images/hero.svg"
-              width={200}
-              height={300}
+              src="/images/2.svg"
+              width={254.89}
+              height={311.64}
               alt="fashion"
             />
-            <p>Oblog bag in the world of ceaser its </p>
+            <p className="text-sm">Harris Tweed Three button Jacket</p>
             <p className="text-orange-600">$120</p>
           </section>
           <section className="text-center">
@@ -173,7 +209,13 @@ export default function Home() {
       {/* Open fashion section */}
       <section className="bg-back p-4 mb-10">
         <section className="grid place-items-center text-center">
-          <Image className="inline-block mb-6" src="/images/logo.svg" width={100} height={50} alt="logo" />
+          <Image
+            className="inline-block mb-6"
+            src="/images/logo.svg"
+            width={100}
+            height={50}
+            alt="logo"
+          />
           <p className="mb-6">
             Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam,
             omnis ?

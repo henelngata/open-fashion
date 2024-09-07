@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ReactElement, JSXElementConstructor, ReactNode, ReactPortal, AwaitedReactNode } from "react";
-
+import styles from "./components.module.css"
 function Header() {
   return (
     <header className="flex justify-between p-3 bg-back">
@@ -92,4 +91,27 @@ function Heading() {
     </section>
   );
 }
-export { Header, Footer, Br, Heading };
+const ScrollingItems = () => {
+  const items = [
+    "Item 1",
+    "Item 2",
+    "Item 3",
+    "Item 4",
+    "Item 5",
+    "Item 6",
+    "Item 7",
+  ];
+
+  return (
+    <div className={styles.scrollContainer}>
+      <div className={styles.scrollContent}>
+        {items.map((item, index) => (
+          <div className={styles.scrollItem} key={index}>
+            {item}
+          </div>
+        ))}
+      </div>
+    </div>
+  );
+};
+export { Header, Footer, Br, Heading, ScrollingItems };
