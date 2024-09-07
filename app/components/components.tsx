@@ -1,6 +1,32 @@
+"use client";
 import Image from "next/image";
 import Link from "next/link";
-import styles from "./components.module.css"
+import styles from "./components.module.css";
+import { AwaitedReactNode, JSXElementConstructor, ReactElement, ReactNode, ReactPortal, useState } from "react";
+import { Heart } from "lucide-react";
+
+ function HeartIcon() {
+  const [isFilled, setIsFilled] = useState(false);
+
+  const toggleFill = () => {
+    setIsFilled(!isFilled);
+  };
+
+  return (
+    <button
+      onClick={toggleFill}
+      className="p-2 rounded-full  transition-colors duration-50 border-none"
+      aria-label={isFilled ? "Unlike" : "Like"}
+    >
+      <Heart
+        className={`w-6 h-6  transition-colors duration-200 ${
+          isFilled ? "fill-red-500 stroke-red-500" : "stroke-white"
+        }`}
+        strokeWidth={.3}
+      />
+    </button>
+  );
+}
 function Header() {
   return (
     <header className="flex justify-between p-3 bg-back">
@@ -63,7 +89,7 @@ function Footer() {
           <p>+60 825 876</p>
           <p>08:00 - 22:00 - Everyday</p>
         </section>
-        <Br/>
+        <Br />
         <nav className="w-5/6 flex justify-between my-5">
           <Link href="/about">About</Link>
           <Link href="/contact">Contact</Link>
@@ -114,4 +140,26 @@ const ScrollingItems = () => {
     </div>
   );
 };
-export { Header, Footer, Br, Heading, ScrollingItems };
+
+interface ProductTextProps {
+  h3: string;
+  paragraph: string;
+}
+
+const ProductText: React.FC<ProductTextProps> = ({ h3, paragraph }) => {
+  return (
+    <section>
+      <h3 className="text-black text-sm font-normal uppercase leading-tight tracking-widest mb-2">
+        {h3}
+      </h3>
+      <p className="w-[338.58px] h-[84.69px] text-[#555555] text-sm font-normal leading-normal mb-4">
+        {paragraph}
+      </p>
+    </section>
+  );
+};
+
+
+
+
+export { Header, Footer, Br, Heading, ScrollingItems, HeartIcon, ProductText };
