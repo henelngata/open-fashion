@@ -1,7 +1,13 @@
 import Image from "next/image";
 import Link from "next/link";
 import { bodoni } from "./fonts/fonts";
-import { Br, ScrollingItems } from "./components/components";
+import {
+  Br,
+  HorizontalScroll,
+  ProductShowcase,
+  ScrollingItems,
+  Tab,
+} from "./components/components";
 export default function Home() {
   return (
     <main>
@@ -14,7 +20,7 @@ export default function Home() {
             alt="hero image"
           />
         </section>
-        <section className="relative z-10 top60">
+        <section className="absolute z-10 top-[40%] left-[20%]">
           <h1
             className={`${bodoni.className} uppercase text-3xl italic font-bold opacity-75 leading-10 letter-1`}
           >
@@ -22,70 +28,118 @@ export default function Home() {
             &accessories
           </h1>
         </section>
-        <section className="absolute top-85 w-2/3 left-14">
-          <Link
-            className="block border-2 border-black font-medium text-off-white  py-2 px-4 bg-black opacity-50 rounded-3xl text-center "
-            href="/collection"
-          >
+        <div className="h-10 px-[30px] py-2 bg-black/40 rounded-[30px]  backdrop-blur-sm justify-center items-center gap-2 inline-flex absolute top-[80%] left-[20%]">
+          <div className="text-[#fcfcfc] text-base font-normal font-['Tenor Sans'] uppercase leading-normal">
             Explore Collection
-          </Link>
-        </section>
+          </div>
+        </div>
       </section>
       {/* New arrival section */}
-      <section className="red mt-10 letter-2 p-4 -top-20 z-10">
+      {/*  */}
+
+      {/*  */}
+      <section className="mt-10 letter-2 p-4 -top-20 z-10">
         <section className="grid place-items-center mb-8">
           <h2 className="uppercase ">new arrival</h2>
           <Br />
         </section>
         <section>
           <section className="flex justify-between p-4">
-            <Link href="/all"> All</Link>
-            <Link href="/Apparel"> Apparel</Link>
-            <Link href="/all"> Dress</Link>
-            <Link href="/all"> Tshirt</Link>
-            <Link href="Bag">Bag</Link>
+            <section>
+              <Link
+                className="text-sm font-normal font-['Tenor Sans'] leading-[14.84px] tracking-wide"
+                href="/all"
+              >
+                All
+              </Link>
+              <div className="w-1 h-1  origin-top-left rotate-45 bg-[#dd8560]" />
+            </section>
+            <section>
+              <Link
+                className="opacity-80 text-center text-[#888888] text-sm font-normal font-['Tenor Sans'] leading-[14.84px] tracking-wide"
+                href="/Apparel"
+              >
+                {" "}
+                Apparel
+              </Link>
+              <div className="w-1 h-1  origin-top-left rotate-45 bg-[#dd8560]" />
+            </section>
+            <section>
+              <Link
+                className="opacity-80 text-center text-[#888888] text-sm font-normal font-['Tenor Sans'] leading-[14.84px] tracking-wide"
+                href="/all"
+              >
+                {" "}
+                Dress
+              </Link>
+              <div className="w-1 h-1  origin-top-left rotate-45 bg-[#dd8560]" />
+            </section>
+            <section>
+              <Link
+                className="opacity-80 text-center text-[#888888] text-sm font-normal font-['Tenor Sans'] leading-[14.84px] tracking-wide"
+                href="/all"
+              >
+                {" "}
+                Tshirt
+              </Link>
+              <div className="w-1 h-1 origin-top-left rotate-45 bg-[#dd8560]" />
+            </section>
+            <section>
+              <Link
+                className="opacity-80 text-center text-[#888888] text-sm font-normal font-['Tenor Sans'] leading-[14.84px] tracking-wide"
+                href="/all"
+              >
+                {" "}
+                Bag
+              </Link>
+              <div className="w-1 h-1  origin-top-left rotate-45 bg-[#dd8560]" />
+            </section>
           </section>
-          <section className="grid grid-cols-2 gap-2.5">
-            <section className="text-center">
-              <Image
-                src="/images/1.svg"
-                width={165}
-                height={200}
-                alt="fashion"
-              />
-              <p className="leading-0"> 21WN reversible angora cardigan</p>
-              <p className="text-orange-600">$120</p>
-            </section>
-            <section className="text-center">
-              <Image
-                src="/images/2.svg"
-                width={165}
-                height={200}
-                alt="fashion"
-              />
-              <p>Oblog bag in the world of ceaser its </p>
-              <p className="text-orange-600">$120</p>
-            </section>
-            <section className="text-center">
-              <Image
-                src="/images/3.svg"
-                width={165}
-                height={200}
-                alt="fashion"
-              />
-              <p>Oblog bag in the world of ceaser its </p>
-              <p className="text-orange-600">$120</p>
-            </section>
-            <section className="text-center">
-              <Image
-                src="/images/2.svg"
-                width={165}
-                height={200}
-                alt="fashion"
-              />
-              <p>Oblog bag in the world of ceaser its </p>
-              <p className="text-orange-600">$120</p>
-            </section>
+          <section className="grid grid-cols-2 gap-2  w-[100%] ">
+            <div className="w-[100%] h-[260.16px] pb-[0.16px] flex-col justify-center items-center  inline-flex relative">
+              <img className="w-[100%] h-[200px]" src="/images/1.svg" />
+              <div className="h-14 flex-col justify-start items-center inline-flex">
+                <div className="w-[148.89px] text-center text-[#333333] text-xs font-normal font-['Tenor Sans'] leading-none">
+                  21WN reversible angora cardigan
+                </div>
+                <div className="text-[#dd8560] text-[15px] font-normal font-['Tenor Sans'] leading-normal">
+                  $120
+                </div>
+              </div>
+            </div>
+            <div className="w-[100%] h-[260.16px] pb-[0.16px] flex-col justify-center items-center  inline-flex  relative">
+              <img className="w-[100%] h-[200px]" src="/images/1.svg" />
+              <div className="h-14 flex-col justify-start items-center inline-flex">
+                <div className="w-[148.89px] text-center text-[#333333] text-xs font-normal font-['Tenor Sans'] leading-none">
+                  21WN reversible angora cardigan
+                </div>
+                <div className="text-[#dd8560] text-[15px] font-normal font-['Tenor Sans'] leading-normal">
+                  $120
+                </div>
+              </div>
+            </div>
+            <div className="w-[100%] h-[260.16px] pb-[0.16px] flex-col justify-center items-center  inline-flex relative">
+              <img className="w-[100%] h-[200px]" src="/images/1.svg" />
+              <div className="h-14 flex-col justify-start items-center inline-flex">
+                <div className="w-[148.89px] text-center text-[#333333] text-xs font-normal font-['Tenor Sans'] leading-none">
+                  21WN reversible angora cardigan
+                </div>
+                <div className="text-[#dd8560] text-[15px] font-normal font-['Tenor Sans'] leading-normal">
+                  $120
+                </div>
+              </div>
+            </div>
+            <div className="w-[100%] h-[260.16px] pb-[0.16px] flex-col justify-center items-center  inline-flex  relative">
+              <img className="w-[100%] h-[200px]" src="/images/1.svg" />
+              <div className="h-14 flex-col justify-start items-center inline-flex">
+                <div className="w-[148.89px] text-center text-[#333333] text-xs font-normal font-['Tenor Sans'] leading-none">
+                  21WN reversible angora cardigan
+                </div>
+                <div className="text-[#dd8560] text-[15px] font-normal font-['Tenor Sans'] leading-normal">
+                  $120
+                </div>
+              </div>
+            </div>
           </section>
           <section className="grid place-items-center my-8 ">
             <Link href="#" className="flex ">
@@ -101,6 +155,7 @@ export default function Home() {
           </section>
         </section>
       </section>
+      {/* partners */}
       <section className="p-4">
         <section className="grid place-items-center my-8">
           <Br />
@@ -148,66 +203,73 @@ export default function Home() {
           <Br />
         </section>
       </section>
-
       {/* Just for you section */}
+
       <section className="p-4">
-        <section className="mt-10 letter-2 p-4">
-          <section className="grid place-items-center mb-8">
+        <section className="mt-8 letter-2 p-4">
+          <section className="grid place-items-center ">
             <h2 className="uppercase ">Just for you</h2>
             <Br />
           </section>
         </section>
-        <section className="grid-flow-col">
-          <ScrollingItems/>
-          <section className="text-center red">
-            <Image
-              className="rounded-md"
-              src="/images/2.svg"
-              width={254.89}
-              height={311.64}
-              alt="fashion"
-            />
-            <p className="text-sm">Harris Tweed Three button Jacket</p>
-            <p className="text-orange-600">$120</p>
-          </section>
-          <section className="text-center">
-            <Image
-              className="rounded-md"
-              src="/images/hero.svg"
-              width={200}
-              height={300}
-              alt="fashion"
-            />
-            <p>Oblog bag in the world of ceaser its </p>
-            <p className="text-orange-600">$120</p>
-          </section>
-          <section className="text-center">
-            <Image
-              className="rounded-md"
-              src="/images/hero.svg"
-              width={200}
-              height={300}
-              alt="fashion"
-            />
-            <p>Oblog bag in the world of ceaser its </p>
-            <p className="text-orange-600">$120</p>
-          </section>
-        </section>
-      </section>
-
-      {/* Trending section */}
-      <section className="p-4">
-        <section className="mt-10 letter-2mb-5">
-          <section className="grid place-items-center">
-            <h2 className="uppercase ">@trending</h2>
-          </section>
-        </section>
         <section>
-          <p className="inline-block rounded-xl p-2 bg-back">#2021</p>
+          <ProductShowcase
+            products={[
+              { id: 1, imageUrl: "/images/1.svg", name: "juma", price: "$120" },
+              { id: 1, imageUrl: "/images/2.svg", name: "juma", price: "$120" },
+              { id: 1, imageUrl: "/images/2.svg", name: "juma", price: "$120" },
+            ]}
+          />
         </section>
       </section>
+      {/* Trending section */}
+      <div className="w-[375px] h-[140px] relative mb-8 ">
+        <div className="left-[111px] top-[6px] absolute text-center text-black text-lg font-normal font-['Tenor Sans'] uppercase leading-10 tracking-[4px]">
+          @Trending
+        </div>
+        <div className="px-2.5 py-2 left-[16px] top-[54px] absolute bg-[#f8f8f8] rounded-[30px] justify-start items-start gap-2.5 inline-flex">
+          <div className="text-center text-[#333333] text-sm font-normal font-['Tenor Sans'] leading-none tracking-tight">
+            #2021
+          </div>
+        </div>
+        <div className="px-2.5 py-2 left-[16px] top-[94px] absolute bg-[#f8f8f8] rounded-[30px] justify-start items-start gap-2.5 inline-flex">
+          <div className="text-center text-[#333333] text-sm font-normal font-['Tenor Sans'] leading-none tracking-tight">
+            #dress
+          </div>
+        </div>
+        <div className="px-2.5 py-2 left-[93px] top-[94px] absolute bg-[#f8f8f8] rounded-[30px] justify-start items-start gap-2.5 inline-flex">
+          <div className="text-center text-[#333333] text-sm font-normal font-['Tenor Sans'] leading-none tracking-tight">
+            #autumncollection
+          </div>
+        </div>
+        <div className="px-2.5 py-2 left-[85px] top-[54px] absolute bg-[#f8f8f8] rounded-[30px] justify-start items-start gap-2.5 inline-flex">
+          <div className="text-center text-[#333333] text-sm font-normal font-['Tenor Sans'] leading-none tracking-tight">
+            #spring
+          </div>
+        </div>
+        <div className="px-2.5 py-2 left-[168px] top-[54px] absolute bg-[#f8f8f8] rounded-[30px] justify-start items-start gap-2.5 inline-flex">
+          <div className="text-center text-[#333333] text-sm font-normal font-['Tenor Sans'] leading-none tracking-tight">
+            #collection
+          </div>
+        </div>
+        <div className="px-2.5 py-2 left-[276px] top-[54px] absolute bg-[#f8f8f8] rounded-[30px] justify-start items-start gap-2.5 inline-flex">
+          <div className="text-center text-[#333333] text-sm font-normal font-['Tenor Sans'] leading-none tracking-tight">
+            #fall
+          </div>
+        </div>
+        <div className="px-2.5 py-2 left-[251px] top-[94px] absolute bg-[#f8f8f8] rounded-[30px] justify-start items-start gap-2.5 inline-flex">
+          <div className="text-center text-[#333333] text-sm font-normal font-['Tenor Sans'] leading-none tracking-tight">
+            #openfashion
+          </div>
+        </div>
+      </div>
+      {/* experiment */}
+
       {/* Open fashion section */}
-      <section className="bg-back p-4 mb-10">
+      {/*  */}
+
+      {/*  */}
+      <section className="bg-back p-4 mb-8 ">
         <section className="grid place-items-center text-center">
           <Image
             className="inline-block mb-6"
@@ -216,35 +278,110 @@ export default function Home() {
             height={50}
             alt="logo"
           />
-          <p className="mb-6">
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quisquam,
-            omnis ?
-          </p>
+          <div className="w-[285.04px] h-[65.63px]  relative text-center text-[#555555] text-sm font-normal font-['Tenor Sans'] leading-tight tracking-tight">
+            Making a luxurious lifestyle accessible for a generous group of
+            women is our daily drive.
+          </div>
           <Br />
         </section>
-        <section className=" grid place-items-center grid-cols-2 mt-6">
-          <section className="grid place-items-center">
-            <Image src="/images/search.svg" width={48} height={48} alt="logo" />
-            <p>Lorem ipsum dolor sit amet, lo .</p>
-          </section>
-          <section className="grid place-items-center">
-            <Image src="/images/search.svg" width={48} height={48} alt="logo" />
-            <p>Lorem ipsum dolor sit amet, lo .</p>
-          </section>
-          <section className="grid place-items-center">
-            <Image src="/images/search.svg" width={48} height={48} alt="logo" />
-            <p>Lorem ipsum dolor sit amet, lo .</p>
-          </section>
-          <section className="grid place-items-center">
-            <Image src="/images/search.svg" width={48} height={48} alt="logo" />
-            <p>Lorem ipsum dolor sit amet, lo .</p>
-          </section>
-          <section className="grid place-items-center">
-            <Image src="/images/search.svg" width={48} height={48} alt="logo" />
-            <p>Lorem ipsum dolor sit amet, lo .</p>
-          </section>
+        <section className=" grid grid-cols-2 gap-y-10 mt-2">
+          <div className="w-[165px] h-[86.88px] relative">
+            <div className="w-[165px] left-0 top-[46.88px] absolute text-center text-[#555555] text-[13px] font-normal font-['Tenor Sans'] leading-tight">
+              Fast shipping. Free on orders over $25.
+            </div>
+            <img
+              className="w-[49.77px] h-[34.91px] left-[59.55px] top-0 absolute"
+              src="/images/m1.svg"
+            />
+          </div>
+          <div className="w-[165px] h-[86.88px] relative">
+            <div className="w-[165px] left-0 top-[46.88px] absolute text-center text-[#555555] text-[13px] font-normal font-['Tenor Sans'] leading-tight">
+              Sustainable process from start to finish.
+            </div>
+            <img
+              className="w-[49.77px] h-[34.91px] left-[59.55px] top-0 absolute"
+              src="/images/m2.svg"
+            />
+          </div>
+          <div className="w-[165px] h-[86.88px] relative">
+            <div className="w-[165px] left-0 top-[46.88px] absolute text-center text-[#555555] text-[13px] font-normal font-['Tenor Sans'] leading-tight">
+              Unique designs and high-quality materials.
+            </div>
+            <img
+              className="w-[49.77px] h-[34.91px] left-[59.55px] top-0 absolute"
+              src="/images/m3.svg"
+            />
+          </div>
+          <div className="w-[165px] h-[86.88px] relative">
+            <div className="w-[165px] left-0 top-[46.88px] absolute text-center text-[#555555] text-[13px] font-normal font-['Tenor Sans'] leading-tight">
+              Fast shipping. Free on orders over $25.
+            </div>
+            <img
+              className="w-[49.77px] h-[34.91px] left-[59.55px] top-0 absolute"
+              src="/images/m4.svg"
+            />
+          </div>
         </section>
       </section>
+      {/* Follow us */}
+      <div className="w-[375px] h-[460px] relative">
+        <div className=" relative text-center text-black text-lg font-normal font-['Tenor Sans'] uppercase leading-10 tracking-[4px]">
+          Follow Us
+        </div>
+        <Image
+          className="w-6 h-6 left-[175.50px] top-[58px] absolute"
+          src="/images/insta.svg"
+          width={24}
+          height={24}
+          alt="instagram icon"
+        />
+
+        <div className="w-[164px] h-[164px] left-[194px] top-[100px] absolute">
+          <img
+            className="w-[164px] h-[164px] left-0 top-0 absolute"
+            src="/images/mia.svg"
+          />
+          <div className="w-[164px] h-[39px] px-[9px] py-3 left-0 top-[125px] absolute bg-gradient-to-t from-black to-black justify-start items-center gap-2.5 inline-flex">
+            <div className="text-center text-white text-sm font-normal font-['Tenor Sans'] leading-[14.84px] tracking-wide">
+              @_jihyn
+            </div>
+          </div>
+        </div>
+        <div className="w-[164px] h-[164px] left-[16px] top-[100px] absolute">
+          <img
+            className="w-[164px] h-[164px] left-0 top-0 absolute"
+            src="/images/ji.svg"
+          />
+          <div className="w-[164px] h-10 px-[9px] py-3 left-0 top-[124px] absolute bg-gradient-to-t from-black to-black justify-start items-center gap-2.5 inline-flex">
+            <div className="text-center text-white text-sm font-normal font-['Tenor Sans'] tracking-wide">
+              @mia
+            </div>
+          </div>
+        </div>
+        <div className="w-[164px] h-[164px] left-[16px] top-[279px] absolute">
+          <img
+            className="w-[164px] h-[164px] left-0 top-0 absolute"
+            src="/images/mia2.svg"
+          />
+          <div className="w-[164px] h-10 px-[9px] py-3 left-0 top-[124px] absolute bg-gradient-to-t from-black to-black justify-start items-center gap-2.5 inline-flex">
+            <div className="text-center text-white text-sm font-normal font-['Tenor Sans'] tracking-wide">
+              @mia
+            </div>
+          </div>
+        </div>
+        <div className="w-[164px] h-[164px] left-[194px] top-[279px] absolute">
+          <img
+            className="w-[164px] h-[164px] left-0 top-0 absolute"
+            src="/images/j2.svg"
+          />
+          <div className="w-[164px] h-[39px] px-[9px] py-3 left-0 top-[125px] absolute bg-gradient-to-t from-black to-black justify-start items-center gap-2.5 inline-flex">
+            <div className="text-center text-white text-sm font-normal font-['Tenor Sans'] leading-[14.84px] tracking-wide">
+              @_jihyn
+            </div>
+          </div>
+        </div>
+      </div>
+      {/* follow us */}
     </main>
   );
 }
