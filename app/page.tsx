@@ -8,6 +8,7 @@ import {
   ScrollingItems,
   Tab,
 } from "./components/components";
+import MobileNav from "./components/menu";
 export default function Home() {
   return (
     <main>
@@ -382,6 +383,9 @@ export default function Home() {
         </div>
       </div>
       {/* follow us */}
+      {/*  */}
+     <MobileNav />
+      {/*  */}
     </main>
   );
 }

@@ -12,6 +12,7 @@ import {
 } from "react";
 import { Heart } from "lucide-react";
 import React, { useRef, useEffect } from "react";
+import MobileNav from "./menu";
 
 function HeartIcon() {
   const [isFilled, setIsFilled] = useState(false);
@@ -38,12 +39,7 @@ function HeartIcon() {
 function Header() {
   return (
     <header className="flex justify-between p-3 bg-back">
-      <Image
-        src="/images/menu.svg"
-        width={24}
-        height={24}
-        alt="mobile menu navigation"
-      />
+      <MobileNav />
       <Image
         src="/images/logo.svg"
         width={78.08}
