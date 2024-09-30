@@ -9,6 +9,8 @@ import {
   Tab,
 } from "./components/components";
 import MobileNav from "./components/menu";
+import NewArival from "./components/NewArival";
+import JustForYou from "./components/JustYou";
 export default function Home() {
   return (
     <main>
@@ -36,126 +38,9 @@ export default function Home() {
         </div>
       </section>
       {/* New arrival section */}
+      <NewArival />
       {/*  */}
 
-      {/*  */}
-      <section className="mt-10 letter-2 p-4 -top-20 z-10">
-        <section className="grid place-items-center mb-8">
-          <h2 className="uppercase ">new arrival</h2>
-          <Br />
-        </section>
-        <section>
-          <section className="flex justify-between p-4">
-            <section>
-              <Link
-                className="text-sm font-normal font-['Tenor Sans'] leading-[14.84px] tracking-wide"
-                href="/all"
-              >
-                All
-              </Link>
-              <div className="w-1 h-1  origin-top-left rotate-45 bg-[#dd8560]" />
-            </section>
-            <section>
-              <Link
-                className="opacity-80 text-center text-[#888888] text-sm font-normal font-['Tenor Sans'] leading-[14.84px] tracking-wide"
-                href="/Apparel"
-              >
-                {" "}
-                Apparel
-              </Link>
-              <div className="w-1 h-1  origin-top-left rotate-45 bg-[#dd8560]" />
-            </section>
-            <section>
-              <Link
-                className="opacity-80 text-center text-[#888888] text-sm font-normal font-['Tenor Sans'] leading-[14.84px] tracking-wide"
-                href="/all"
-              >
-                {" "}
-                Dress
-              </Link>
-              <div className="w-1 h-1  origin-top-left rotate-45 bg-[#dd8560]" />
-            </section>
-            <section>
-              <Link
-                className="opacity-80 text-center text-[#888888] text-sm font-normal font-['Tenor Sans'] leading-[14.84px] tracking-wide"
-                href="/all"
-              >
-                {" "}
-                Tshirt
-              </Link>
-              <div className="w-1 h-1 origin-top-left rotate-45 bg-[#dd8560]" />
-            </section>
-            <section>
-              <Link
-                className="opacity-80 text-center text-[#888888] text-sm font-normal font-['Tenor Sans'] leading-[14.84px] tracking-wide"
-                href="/all"
-              >
-                {" "}
-                Bag
-              </Link>
-              <div className="w-1 h-1  origin-top-left rotate-45 bg-[#dd8560]" />
-            </section>
-          </section>
-          <section className="grid grid-cols-2 gap-2  w-[100%] ">
-            <div className="w-[100%] h-[260.16px] pb-[0.16px] flex-col justify-center items-center  inline-flex relative">
-              <img className="w-[100%] h-[200px]" src="/images/1.svg" />
-              <div className="h-14 flex-col justify-start items-center inline-flex">
-                <div className="w-[148.89px] text-center text-[#333333] text-xs font-normal font-['Tenor Sans'] leading-none">
-                  21WN reversible angora cardigan
-                </div>
-                <div className="text-[#dd8560] text-[15px] font-normal font-['Tenor Sans'] leading-normal">
-                  $120
-                </div>
-              </div>
-            </div>
-            <div className="w-[100%] h-[260.16px] pb-[0.16px] flex-col justify-center items-center  inline-flex  relative">
-              <img className="w-[100%] h-[200px]" src="/images/1.svg" />
-              <div className="h-14 flex-col justify-start items-center inline-flex">
-                <div className="w-[148.89px] text-center text-[#333333] text-xs font-normal font-['Tenor Sans'] leading-none">
-                  21WN reversible angora cardigan
-                </div>
-                <div className="text-[#dd8560] text-[15px] font-normal font-['Tenor Sans'] leading-normal">
-                  $120
-                </div>
-              </div>
-            </div>
-            <div className="w-[100%] h-[260.16px] pb-[0.16px] flex-col justify-center items-center  inline-flex relative">
-              <img className="w-[100%] h-[200px]" src="/images/1.svg" />
-              <div className="h-14 flex-col justify-start items-center inline-flex">
-                <div className="w-[148.89px] text-center text-[#333333] text-xs font-normal font-['Tenor Sans'] leading-none">
-                  21WN reversible angora cardigan
-                </div>
-                <div className="text-[#dd8560] text-[15px] font-normal font-['Tenor Sans'] leading-normal">
-                  $120
-                </div>
-              </div>
-            </div>
-            <div className="w-[100%] h-[260.16px] pb-[0.16px] flex-col justify-center items-center  inline-flex  relative">
-              <img className="w-[100%] h-[200px]" src="/images/1.svg" />
-              <div className="h-14 flex-col justify-start items-center inline-flex">
-                <div className="w-[148.89px] text-center text-[#333333] text-xs font-normal font-['Tenor Sans'] leading-none">
-                  21WN reversible angora cardigan
-                </div>
-                <div className="text-[#dd8560] text-[15px] font-normal font-['Tenor Sans'] leading-normal">
-                  $120
-                </div>
-              </div>
-            </div>
-          </section>
-          <section className="grid place-items-center my-8 ">
-            <Link href="#" className="flex ">
-              Explore More{" "}
-              <Image
-                className="ml-2"
-                src="/images/forward-arrow.svg"
-                width={18}
-                height={18}
-                alt="forward arrow"
-              />{" "}
-            </Link>
-          </section>
-        </section>
-      </section>
       {/* partners */}
       <section className="p-4">
         <section className="grid place-items-center my-8">
@@ -205,24 +90,7 @@ export default function Home() {
         </section>
       </section>
       {/* Just for you section */}
-
-      <section className="p-4">
-        <section className="mt-8 letter-2 p-4">
-          <section className="grid place-items-center ">
-            <h2 className="uppercase ">Just for you</h2>
-            <Br />
-          </section>
-        </section>
-        <section>
-          <ProductShowcase
-            products={[
-              { id: 1, imageUrl: "/images/1.svg", name: "juma", price: "$120" },
-              { id: 1, imageUrl: "/images/2.svg", name: "juma", price: "$120" },
-              { id: 1, imageUrl: "/images/2.svg", name: "juma", price: "$120" },
-            ]}
-          />
-        </section>
-      </section>
+      <JustForYou />
       {/* Trending section */}
       <div className="w-[375px] h-[140px] relative mb-8 ">
         <div className="left-[111px] top-[6px] absolute text-center text-black text-lg font-normal font-['Tenor Sans'] uppercase leading-10 tracking-[4px]">
@@ -265,10 +133,8 @@ export default function Home() {
         </div>
       </div>
       {/* experiment */}
-
       {/* Open fashion section */}
       {/*  */}
-
       {/*  */}
       <section className="bg-back p-4 mb-8 ">
         <section className="grid place-items-center text-center">
@@ -382,10 +248,6 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* follow us */}
-      {/*  */}
-     <MobileNav />
-      {/*  */}
     </main>
   );
 }
