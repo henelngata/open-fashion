@@ -9,7 +9,7 @@ function Blog(){
         {/* pic */}
         <Image src="/images/1.svg" width={120} height={155} alt="pic" />
       </section>
-      <section className="w-[70%] pt-2">
+      <section className="w-[50%] pt-2">
         <h1 className="text-black text-sm font-normal font-['Tenor Sans'] uppercase leading-tight tracking-widest mb-2">
           2021 Style Guide: The Biggest Fall Trends
         </h1>
